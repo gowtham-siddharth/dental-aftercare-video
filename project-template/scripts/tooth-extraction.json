@@ -1,0 +1,52 @@
+{
+  "procedure": "Tooth extraction",
+  "approved": false,
+  "approved_by": null,
+  "approved_on": null,
+  "note": "DRAFT written by Claude from standard extraction aftercare. A qualified dentist must review and approve every line before patients see it.",
+  "show_procedure_title": true,
+  "parts": [
+    {
+      "title": "First 24 hours",
+      "style": "normal",
+      "lines": [
+        { "speaker": "patient", "text": "My tooth is out. What should I do first?", "mood": "worried" },
+        { "speaker": "dentist", "text": "Keep biting gently on the gauze for thirty to forty-five minutes.", "card": "Bite on the gauze for 30 to 45 minutes" },
+        { "speaker": "dentist", "text": "For the first day, don't rinse, spit, or use a straw.", "card": "No rinsing, spitting or straws today" },
+        { "speaker": "dentist", "text": "And please don't smoke. It slows healing.", "card": "No smoking" }
+      ]
+    },
+    {
+      "title": "Eating and cleaning",
+      "style": "normal",
+      "lines": [
+        { "speaker": "patient", "text": "When can I eat?" },
+        { "speaker": "dentist", "text": "Once the numbness wears off, eat soft, cool foods.", "card": "Soft, cool foods once numbness wears off" },
+        { "speaker": "dentist", "text": "Chew on the other side, and avoid hot drinks today.", "card": "Chew on the other side" },
+        { "speaker": "dentist", "text": "Brush gently, but keep away from the area today.", "card": "Brush gently, avoid the area" },
+        { "speaker": "dentist", "text": "From tomorrow, rinse gently with warm salt water after meals.", "card": "From tomorrow: warm salt-water rinse" }
+      ]
+    },
+    {
+      "title": "Pain relief",
+      "style": "normal",
+      "lines": [
+        { "speaker": "patient", "text": "What if it hurts?", "mood": "worried" },
+        { "speaker": "dentist", "text": "Some soreness is normal for a few days.", "card": "Some soreness is normal" },
+        { "speaker": "dentist", "text": "Take only the pain relief your dentist advised, exactly as directed.", "card": "Only the pain relief your dentist advised" },
+        { "speaker": "dentist", "text": "A cold pack on your cheek helps with swelling.", "card": "Cold pack on the cheek for swelling" }
+      ]
+    },
+    {
+      "title": "When to call us",
+      "style": "warning",
+      "lines": [
+        { "speaker": "patient", "text": "When should I call you?" },
+        { "speaker": "dentist", "text": "Call us if the bleeding won't stop after pressing on gauze.", "card": "Bleeding that won't stop" },
+        { "speaker": "dentist", "text": "Or if the pain gets worse after two or three days.", "card": "Pain getting worse after 2 to 3 days" },
+        { "speaker": "dentist", "text": "Or if you have a fever, or swelling that keeps growing.", "card": "Fever or growing swelling" },
+        { "speaker": "patient", "text": "Got it. Thank you, doctor!", "mood": "happy" }
+      ]
+    }
+  ]
+}
