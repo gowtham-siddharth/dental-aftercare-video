@@ -1,1 +1,5 @@
 vendor/
+project-template/out/*
+!project-template/out/README.md
+__pycache__/
+*.pyc
