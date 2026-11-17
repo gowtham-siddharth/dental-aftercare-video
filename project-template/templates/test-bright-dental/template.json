@@ -1,0 +1,5 @@
+{
+  "name": "Bright Dental (TEST TEMPLATE, fake clinic)",
+  "colors": { "primary": "#2A7FBA", "accent": "#F2A541", "warning": "#D64545" },
+  "note": "Fake clinic for testing the joining step. The intro and outro videos are never edited."
+}
