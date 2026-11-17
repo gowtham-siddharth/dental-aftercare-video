@@ -1,0 +1,41 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#fff}canvas{display:block}</style></head>
+<body><canvas id="c" width="2400" height="2300"></canvas>
+<script src="characters.js"></script>
+<script>
+const c = document.getElementById('c'), ctx = c.getContext('2d');
+ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0, 0, c.width, c.height);
+function label(t, x, y, size = 26, color = '#6B7280') { ctx.fillStyle = color; ctx.font = `600 ${size}px sans-serif`; ctx.textAlign = 'center'; ctx.fillText(t, x, y); }
+label('Dentist', 1200, 60, 40, '#2B2D42');
+const dPoses = [
+  ['Rest', { }],
+  ['Talking', { mouth: 'talkHappy', brows: 'happy', armL: 'gesture' }],
+  ['Pointing', { armL: 'point', mouth: 'smile', lookX: 0.6 }],
+  ['Thumbs up', { armL: 'thumbsUp', mouth: 'bigSmile', eyes: 'happy', brows: 'happy' }],
+  ['Waving', { armL: 'wave', mouth: 'talkHappy', brows: 'raised' }],
+];
+dPoses.forEach(([n, st], i) => { const x = 240 + i * 480; Characters.draw(ctx, 'dentist', { x, y: 760, scale: 1, ...st }); label(n, x, 800); });
+label('Patient', 1200, 900, 40, '#2B2D42');
+const pPoses = [
+  ['Rest', { }],
+  ['Asking', { mouth: 'C', brows: 'raised', armL: 'gesture' }],
+  ['Worried', { mouth: 'sad', brows: 'worried' }],
+  ['Relieved', { mouth: 'bigSmile', eyes: 'happy', brows: 'happy', armR: 'thumbsUp' }],
+  ['Listening', { mouth: 'X', headTilt: 6, lookX: -0.5 }],
+];
+pPoses.forEach(([n, st], i) => { const x = 240 + i * 480; Characters.draw(ctx, 'patient', { x, y: 1600, scale: 1, ...st }); label(n, x, 1640); });
+// mouth shapes (head close-ups)
+label('Lip-sync mouth shapes + blink', 1200, 1730, 34, '#2B2D42');
+const m = [...Characters.MOUTHS, 'blink'];
+m.forEach((k, i) => {
+  const x = 120 + i * 216;
+  for (const [who, yy] of [['dentist', 1990], ['patient', 2230]]) {
+    ctx.save(); ctx.beginPath(); ctx.rect(x - 100, yy - 230, 200, 230); ctx.clip();
+    const st = k === 'blink' ? { eyes: 'blink' } : { mouth: k };
+    Characters.draw(ctx, who, { x, y: yy + 300, scale: 0.85, upper: true, ...st });
+    ctx.restore();
+  }
+  label(k, x, 2280, 24);
+});
+document.title = 'done';
+</script></body></html>
