@@ -1,0 +1,19 @@
+{
+  "voices": {
+    "dentist": { "voice": "af_heart", "speed": 0.95 },
+    "patient": { "voice": "am_michael", "speed": 1.0 }
+  },
+  "lang": "en-us",
+  "pause_between_lines": 0.35,
+  "pause_between_parts": 0.9,
+  "title_seconds": 2.6,
+  "tail_seconds": 2.2,
+  "music": true,
+  "music_db_under_voice": -22,
+  "colors": {
+    "primary": "#2A7FBA",
+    "accent": "#F2A541",
+    "warning": "#D64545"
+  },
+  "disclaimer": "Always follow your dentist's personal advice."
+}
