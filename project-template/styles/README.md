@@ -1,3 +1,3 @@
 # styles/
 
-The approved house style, saved here once it is chosen.
+The house style is built into `../../engine/scene.js` (room, cards, captions) and `../characters/characters.js` (the characters). This folder is reserved for alternative styles later.
